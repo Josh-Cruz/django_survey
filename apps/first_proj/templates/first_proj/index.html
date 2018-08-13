@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
     <title>Survey Says</title>
 </head>
 <body>
     <h1>fill out the form</h1>
+    
+    <form action="/results/" method="POST">
     {% csrf_token %}
-    <form action="/results" method="POST">
         <label for="name">Your Name:</label>  <input type="text" name="name" placeholder="Your Full Name">
         <label for="Dojo_Location">Dojo Location:</label>  <select name="Dojo_Location" id="">
-                            <option value="SAn Francisco">San Francisco</option>
+                            <option value="San Francisco">San Francisco</option>
                             <option value="Chicago">Chicago</option>
                             <option value="Seattle">Seattle</option>
                             <option value="Online Bootcamp">Online Bootcamp</option>
